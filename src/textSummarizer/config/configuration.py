@@ -39,3 +39,21 @@ class ConfigurationManager:
         )
 
         return data_validation_config
+    
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        with open(self.config.data_validation.STATUS_FILE, 'r') as f:
+            status = f.read()
+        
+        if status:
+            config = self.config.data_transformation
+
+            create_directories([config.root_dir])
+
+            data_transformation_config = DataTransformationConfig(
+                root_dir=config.root_dir,
+                data_path=config.data_path,
+                tokenizer_name=config.tokenizer_name
+            )
+
+            return data_transformation_config
+        

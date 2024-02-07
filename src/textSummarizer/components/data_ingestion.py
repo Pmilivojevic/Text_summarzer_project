@@ -20,7 +20,7 @@ class DataIngestion:
             logger.info(f"{filename} download with following info: \n{headers}")
         else:
             logger.info(
-                f"""File {filename} of size: \
+                f"""File of size: \
                     {get_size(Path(self.config.local_data_file))} \
                     already exists!"""
             )
