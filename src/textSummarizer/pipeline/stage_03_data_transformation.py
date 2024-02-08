@@ -2,8 +2,6 @@ from textSummarizer.config.configuration import ConfigurationManager
 from textSummarizer.components.data_transformation import DataTransformation
 
 
-
-
 class DataTransformationTrainingPipeline:
     def __init__(self):
         pass
