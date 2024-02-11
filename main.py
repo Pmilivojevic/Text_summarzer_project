@@ -45,18 +45,18 @@ except Exception as e:
     raise e
 
 
-# STAGE_NAME = "Model Trainer stage"
+STAGE_NAME = "Model Trainer stage"
 
-# try:
-#     logger.info("*************************************************")
-#     logger.info(f">>>>>>>>>> stage {STAGE_NAME} started <<<<<<<<<<")
-#     data_trainer = ModelTrainerTrainingPipeline()
-#     data_trainer.main()
-#     logger.info(f">>>>>>>>>> stage {STAGE_NAME} completed <<<<<<<<<<\n\nx====================x")
+try:
+    logger.info("*************************************************")
+    logger.info(f">>>>>>>>>> stage {STAGE_NAME} started <<<<<<<<<<")
+    data_trainer = ModelTrainerTrainingPipeline()
+    data_trainer.main()
+    logger.info(f">>>>>>>>>> stage {STAGE_NAME} completed <<<<<<<<<<\n\nx====================x")
 
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
 STAGE_NAME = "Model Evaluation stage"
